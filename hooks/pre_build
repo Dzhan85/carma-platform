@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$SOURCE_BRANCH" = "develop" ]] || [[ "$SOURCE_BRANCH" = "bugfix/*" ]]; then
+if [[ "$SOURCE_BRANCH" = "develop" ]] || [[ "$SOURCE_BRANCH" = "bugfix/.*" ]]; then
     # add -d flag to checkout.sh and update image dependencies
     sed -i "s|checkout.sh|checkout.sh -d|g; s|usdotfhwastol|usdotfhwastoldev|g; s|:[0-9]*\.[0-9]*\.[0-9]*|:develop|g" \
         Dockerfile
