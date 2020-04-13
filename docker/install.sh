@@ -22,11 +22,29 @@ set -ex
 source /opt/ros/kinetic/setup.bash
 source /opt/autoware.ai/ros/install/setup.bash --extend
 
+echo "PWD and LS"
+pwd
+ls
+echo ""
 cd ~/carma_ws
+echo "PWD and LS"
+pwd
+ls
+echo ""
+
 sudo apt-get update
 rosdep update
 rosdep install --from-paths src --ignore-src -y
+echo "PWD and LS"
+pwd
+ls
+echo ""
 ./src/CARMAPlatform/carma_build -c ~/carma_ws -a /opt/autoware.ai/ -x
+echo "PWD and LS"
+pwd
+ls
+echo ""
+
 
 # Copy the installed files
 cd ~/carma_ws 
