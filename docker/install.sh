@@ -38,6 +38,8 @@ rosdep install --from-paths src --ignore-src -y
 echo "PWD and LS"
 pwd
 ls
+ls src
+ls src/CARMAPlatform
 echo ""
 ./src/CARMAPlatform/carma_build -c ~/carma_ws -a /opt/autoware.ai/ -x
 echo "PWD and LS"
